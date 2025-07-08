@@ -1,0 +1,222 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: url('imagendochatbot.png') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+/* Container principal */
+.chat-wrapper {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animação */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cabeçalho com logo */
+.chat-header {
+  background-color: #4a7c59;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.chat-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Mensagens e seções */
+.chat-message {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  font-size: 16px;
+}
+
+.chat-message input[type="text"] {
+  margin-top: 10px;
+  padding: 8px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.chat-message button {
+  margin-top: 10px;
+  background-color: #06d6a0;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.chat-message button:hover {
+  background-color: #04b28b;
+}
+
+/* Lista de produtos */
+.product-list {
+  padding: 15px;
+}
+
+.product-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.product-price {
+  color: #4a7c59;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.add-btn {
+  background-color: #ffd166;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #fcbf49;
+}
+
+/* Resumo do carrinho */
+.cart-summary {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+.cart-summary h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+#cartContent {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#cartContent ul {
+  list-style: none;
+}
+
+#cartContent li {
+  margin-bottom: 5px;
+}
+
+#cartContent button {
+  margin-left: 10px;
+  background-color: #ef476f;
+  color: #fff;
+  border: none;
+  padding: 2px 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+}
+
+#cartContent button:hover {
+  background-color: #c73258;
+}
+
+.payment-btn, .back-btn {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px 0;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.payment-btn {
+  background-color: #06d6a0;
+  color: #fff;
+}
+
+.payment-btn:hover {
+  background-color: #03b387;
+}
+
+.back-btn {
+  background-color: #ef476f;
+  color: #fff;
+}
+
+.back-btn:hover {
+  background-color: #d43f63;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+  .chat-wrapper {
+    max-width: 95%;
+  }
+
+  .product-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .add-btn {
+    margin-top: 5px;
+    width: 100%;
+  }
+}

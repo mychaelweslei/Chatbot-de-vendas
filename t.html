@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Chatbot - Empório Rural</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="t.css">
+</head>
+<body>
+
+  <div class="chat-wrapper">
+    <!-- Cabeçalho com logo -->
+    <header class="chat-header">
+      <img src="logo.png" alt="Logo Empório Rural" class="chat-logo">
+      <h1>Empório Rural</h1>
+    </header>
+
+    <!-- Seção para o cliente digitar o nome -->
+    <section class="chat-message">
+      <p>Olá! Seja bem-vindo ao Empório Rural! Como posso te chamar?</p>
+      <input type="text" id="userNameInput" placeholder="Digite seu nome..." />
+      <button onclick="confirmarNome()">Confirmar</button>
+    </section>
+
+    <!-- Saudação personalizada com o nome -->
+    <section class="chat-message" id="saudacaoPersonalizada" style="display:none;">
+      <p>Olá, <span id="userName">Cliente</span>! Aqui estão nossos produtos:</p>
+    </section>
+
+    <!-- Lista de produtos (gerada dinamicamente pelo JS) -->
+    <section class="product-list" id="catalogoProdutos" style="display:none;">
+      <!-- produtos aparecem aqui -->
+    </section>
+
+    <!-- Resumo do carrinho -->
+    <section class="cart-summary">
+      <h2>Resumo do Carrinho <span id="badgeCarrinho">(0)</span></h2>
+      <div id="cartContent"></div>
+
+      <!-- Campo de endereço para delivery -->
+      <div id="enderecoEntrega" style="display:none; margin-top:10px;">
+        <label for="enderecoInput">Endereço para entrega:</label><br>
+        <input type="text" id="enderecoInput" placeholder="Digite o endereço completo...">
+      </div>
+
+      <button class="payment-btn" onclick="escolherPagamento()">Escolher Forma de Pagamento</button>
+      <button class="back-btn" onclick="voltarMenu()">Voltar</button>
+
+      <button class="payment-btn" style="background-color:#4a7c59; margin-top:5px;" onclick="imprimirPedido()">Imprimir Pedido</button>
+    </section>
+  </div>
+
+  <script src="t.js"></script>
+</body>
+</html>

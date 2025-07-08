@@ -1,0 +1,164 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Corpo com fundo */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('imagendochatbot.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Animação suave de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Container do login */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.login-container:hover {
+    transform: translateY(-3px);
+}
+
+/* Logo */
+.logo-img {
+    width: 120px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+/* Título */
+.title {
+    font-size: 28px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Texto explicativo */
+p {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+}
+
+/* Input */
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.3);
+}
+
+/* Botão */
+button {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Mensagens */
+#message {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+#message.success {
+    color: green;
+    animation: pulse 1s infinite;
+}
+
+#message.error {
+    color: red;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+/* Footer */
+.login-footer {
+    margin-top: 20px;
+    font-size: 11px;
+    color: #aaa;
+}
+
+/* Lembre-se de mim */
+.remember {
+    margin: 15px 0 5px;
+    text-align: left;
+    font-size: 13px;
+    color: #555;
+}
+
+.remember input {
+    margin-right: 5px;
+}
+
+/* Link de ajuda */
+.help {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.help a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.help a:hover {
+    text-decoration: underline;
+}

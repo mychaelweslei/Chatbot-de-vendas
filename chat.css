@@ -1,0 +1,190 @@
+/* Estilo geral da página */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Fundo claro para destacar o chatbot */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contêiner principal do chatbot */
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Caixa de chat com as mensagens */
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Mensagens do chat */
+.chat-message {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para as mensagens do chatbot */
+.chat-message p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+}
+
+/* Estilo para a mensagem inicial do chatbot */
+#welcomeMessage {
+    text-align: center;
+    color: #4CAF50; /* Verde */
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo da saudação personalizada */
+#nameGreeting {
+    text-align: center;
+    font-size: 18px;
+    color: #4CAF50; /* Verde */
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo dos botões de interação */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito ao passar o mouse sobre os botões */
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Efeito de "pressionar" o botão */
+button:active {
+    transform: scale(0.98);
+}
+
+/* Input de texto do nome do usuário */
+.chat-input input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+/* Efeito de foco no campo de entrada */
+.chat-input input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+/* Estilo para o menu de produtos */
+#productMenu {
+    font-size: 16px;
+    color: #333;
+}
+
+#productMenu button {
+    background-color: #fff;
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+    transition: background-color 0.3s ease;
+}
+
+#productMenu button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Estilo para as descrições dos produtos */
+#productDetails {
+    font-size: 16px;
+    color: #333;
+    padding: 10px 0;
+}
+
+/* Estilo da opção de confirmação de compra */
+#confirmationMessage {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo da caixa de input de texto */
+.chat-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Efeito 3D para as mensagens */
+.chat-message p {
+    font-size: 18px;
+    color: #333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o fundo da caixa do chatbot */
+.chat-container {
+    background: linear-gradient(135deg, #9fd5a0, #e0f0d9); /* Gradiente verde claro e branco */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .chat-container {
+        padding: 20px;
+    }
+    button {
+        width: 100%;
+    }
+}
+
+/* Animação para as mensagens */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.chat-message {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Estilo para a tela de carregamento */
+#loading {
+    text-align: center;
+    font-size: 20px;
+    color: #4CAF50;
+    font-weight: bold;
+    margin-top: 20px;
+}

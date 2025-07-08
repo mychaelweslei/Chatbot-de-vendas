@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Empório Rural</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <!-- Logo atualizado -->
+        <div class="logo">
+            <img src="logoloja.png" alt="Logo Empório Rural" class="logo-img">
+        </div>
+
+        <h1 class="title">Bem-vindo ao Empório Rural</h1>
+
+        <p>Digite seu e-mail para acessar os produtos Free Gluten!</p>
+
+        <!-- FORM corrigido: sem method/action -->
+        <form id="loginForm">
+            <label for="email" class="visually-hidden">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required autocomplete="email">
+            <button type="submit" aria-label="Entrar no sistema">Entrar</button>
+
+            <!-- NOVO: lembre-se de mim -->
+            <div class="remember">
+                <input type="checkbox" id="rememberMe" name="rememberMe">
+                <label for="rememberMe">Lembre-se de mim</label>
+            </div>
+
+            <!-- NOVO: link para ajuda -->
+            <p class="help"><a href="#">Esqueceu o e-mail? Precisa de ajuda?</a></p>
+        </form>
+
+        <!-- Mensagem que será exibida ao usuário -->
+        <p id="message"></p>
+
+        <!-- NOVO: Footer com termos -->
+        <footer class="login-footer">
+            <small>&copy; 2025 Empório Rural. Todos os direitos reservados.</small>
+        </footer>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
